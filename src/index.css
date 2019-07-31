@@ -6,6 +6,11 @@ html, body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+/* src/index.css */
+h1 {
+    text-align: center;
+}
+
 #equation-input {
     flex: 1 1 70%;
     padding: 10px;
