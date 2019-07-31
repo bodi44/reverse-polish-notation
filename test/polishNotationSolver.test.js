@@ -1,5 +1,5 @@
 const assert = require('assert')
-const PolishNotationSolver = require('../src/polishNotationSolver')
+const PolishNotationSolver = require('../src/script/polishNotationSolver')
 
 describe('testing PolishNotationSolver class', () => {
   it('should create class', () => {

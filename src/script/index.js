@@ -1,4 +1,4 @@
-const PolishNotationSolver = require('../src/polishNotationSolver')
+const PolishNotationSolver = require('./polishNotationSolver')
 
 const ms = new PolishNotationSolver()
 console.log(ms.toPostfixNotation('3 + 4 * 2 / (1-5) ^ 2'), '\n')
