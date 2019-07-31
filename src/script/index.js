@@ -1,5 +1,18 @@
 const PolishNotationSolver = require('./polishNotationSolver')
 
-const ms = new PolishNotationSolver()
-console.log(ms.toPostfixNotation('3 + 4 * 2 / (1-5) ^ 2'), '\n')
-// console.log(ms.toPostfixNotation('(2 + 4) * (3 + 5)'))
+const solver = new PolishNotationSolver()
+const input = document.getElementById('equation-input')
+const submit = document.getElementById('equation-submit')
+const output = document.getElementById('output')
+
+submit.addEventListener('click', () => {
+  if (input.value !== '') {
+    output.className = 'success'
+    output.innerHTML = `<h3 class="output-title">Output:</h3>${solver.toPostfixNotation(input.value)}`
+    input.value = ''
+  } else {
+    output.className = 'error'
+    output.innerHTML = `<h3 class="output-title">Error: enter correct equation to convert</h3>`
+    input.value = ''
+  }
+})

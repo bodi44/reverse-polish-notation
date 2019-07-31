@@ -45,12 +45,11 @@ class PolishNotationSolver {
         let operator1 = token
         let operator2 = operatorStack[operatorStack.length - 1]
 
-        if (operatorString.indexOf(operator2) !== -1) {
-          while (this.replaceOperators(operator1, operator2)) {
-            outputQueue += operatorStack.pop() + ' '
-            operator2 = operatorStack[operatorStack.length - 1]
-          }
+        while (operatorString.indexOf(operator2) !== -1 && this.replaceOperators(operator1, operator2)) {
+          outputQueue += operatorStack.pop() + ' '
+          operator2 = operatorStack[operatorStack.length - 1]
         }
+
         operatorStack.push(operator1)
       } else if (token === '(') {
         operatorStack.push(token)
