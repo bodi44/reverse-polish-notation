@@ -1,6 +1,5 @@
 const PolishNotationSolver = require('./polishNotationSolver')
-
-import '../index.css'
+require('../index.css')
 
 const solver = new PolishNotationSolver()
 
